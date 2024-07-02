@@ -1,6 +1,5 @@
-// src/App.tsx
 import React, { useRef } from 'react';
-import Section from './components/Section';
+// import Section from './components/Section';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import 'tailwindcss/tailwind.css';
 
@@ -8,18 +7,20 @@ const App: React.FC = () => {
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({ container: containerRef });
-  const x = useTransform(scrollYProgress, [0, 1], [100, 0]);
-  const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
+
+  // Adjust these values to control the scroll speed of the green section
+  const x = useTransform(scrollYProgress, [0, 1], [window.innerWidth, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [window.innerHeight * 0.6, 0]); // Adjusted to scroll slower
 
   return (
-    <div ref={containerRef} className="App h-screen overflow-scroll">
-      <Section color="bg-blue-500">
+    <div ref={containerRef} className="App h-screen relative overflow-scroll">
+      <section className="bg-blue-500 fixed top-0 -z-10 h-screen w-screen" >
         <h1 className="text-white text-5xl">Blue Section</h1>
-      </Section>
-      <motion.div style={{ x, y }}>
-        <Section color="bg-green-500">
+      </section>
+      <motion.div className='z-[100] relative mt-[100vh] ' style={{ x, y }}>
+        <section className="bg-green-500 h-screen w-screen ">
           <h1 className="text-white text-5xl">Green Section</h1>
-        </Section>
+        </section>
       </motion.div>
     </div>
   );
