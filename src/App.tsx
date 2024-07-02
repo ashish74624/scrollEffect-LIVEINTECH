@@ -18,8 +18,14 @@ const App: React.FC = () => {
         <h1 className="text-white text-5xl">Scroll down to see the effect</h1>
       </section>
       <motion.div className='z-[100] relative mt-[100vh] ' style={{ x, y }}>
-        <section className="bg-green-500 flex h-screen w-screen ">
-          <h1 className="text-white text-5xl">Green Section</h1>
+        <section className="bg-amber-300 flex flex-col relative h-screen w-screen ">
+            <p className='text-white text-7xl mt-8 mx-5'>HERE</p>
+            <div className='h-[80vh] w-[90vw] self-end  flex bottom-0 absolute bg-red-500 '>
+                <p className='text-white text-7xl mt-8 mx-5'>IS THE</p>
+                <div className='h-[70vh] w-[70vw] right-0  bottom-0 absolute bg-blue-500 '>
+                    <p className='text-white text-7xl mt-8 mx-5'>EFFECT</p>
+                </div>
+            </div>
         </section>
       </motion.div>
     </div>
