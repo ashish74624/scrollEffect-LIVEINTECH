@@ -22,7 +22,7 @@ const App: React.FC = () => {
             <p className='text-white text-7xl mt-8 mx-5'>HERE</p>
             <div className='h-[80vh] w-[90vw] self-end  flex bottom-0 absolute bg-red-500 '>
                 <p className='text-white text-7xl mt-8 mx-5'>IS THE</p>
-                <div className='h-[70vh] w-[70vw] right-0  bottom-0 absolute bg-blue-500 '>
+                <div className='h-[65vh] w-[70vw] right-0  bottom-0 absolute bg-blue-500 '>
                     <p className='text-white text-7xl mt-8 mx-5'>EFFECT</p>
                 </div>
             </div>
