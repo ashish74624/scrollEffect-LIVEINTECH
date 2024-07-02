@@ -9,7 +9,7 @@ const App: React.FC = () => {
   const { scrollYProgress } = useScroll({ container: containerRef });
 
   // Adjust these values to control the scroll speed of the green section
-  const x = useTransform(scrollYProgress, [0, 1], [window.innerWidth, 0]);
+  const x = useTransform(scrollYProgress, [0, 1], [window.innerWidth+600, 0]);
   const y = useTransform(scrollYProgress, [0, 1], [window.innerHeight , 0]); // Adjusted to scroll slower
 
   return (
