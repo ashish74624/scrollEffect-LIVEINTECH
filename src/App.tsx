@@ -14,11 +14,11 @@ const App: React.FC = () => {
 
   return (
     <div ref={containerRef} className="App h-screen relative overflow-scroll">
-      <section className="bg-blue-500 fixed top-0 -z-10 h-screen w-screen" >
-        <h1 className="text-white text-5xl">Blue Section</h1>
+      <section className="bg-blue-400 fixed top-0 -z-10 h-screen w-screen flex justify-center items-center" >
+        <h1 className="text-white text-5xl">Scroll down to see the effect</h1>
       </section>
       <motion.div className='z-[100] relative mt-[100vh] ' style={{ x, y }}>
-        <section className="bg-green-500 h-screen w-screen ">
+        <section className="bg-green-500 flex h-screen w-screen ">
           <h1 className="text-white text-5xl">Green Section</h1>
         </section>
       </motion.div>
